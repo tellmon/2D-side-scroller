@@ -1,0 +1,36 @@
+horse racing game
+
+need encapsulation - can you pick it up and put it into another program and it just work.
+
+WHY have I done this?
+
+interface - map and the way you input and have graphics at interface and passes it too what needs it
+
+map as a text file
+
+Sprite:
+- abstract
+- x and y pos
+- height and width
+- draw self
+- move sprite right or left based of if moving every tick
+
+nonMoveIngSprite: extends Sprite
+- object collision so when any sprite is in it it speed = 0
+
+EnmmySprite as they all move based of the game timer/ animation timer extends Sprite
+
+- animate
+- speed level
+- jumping level
+- hunger level
+- well being
+
+
+player - the person the player plays as. 
+- amount of money it has. 
+- games played
+- amount won
+
+controller class given to a player class as a extend
+
