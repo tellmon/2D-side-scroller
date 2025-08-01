@@ -1,0 +1,72 @@
+Embedded Justification Summary (for your notes/slide)
+
+    GameRunner: Central controller for orchestration. Manages player, map, timer, and input logic. Shows composition.
+
+    Sprite (abstract): All screen objects inherit movement/drawing logic here. Allows reuse and polymorphism.
+
+    Encapsulation: All attributes are private; interaction is only through methods (e.g., jump(), takeDamage()).
+
+    Interface GameInterface: Used by Map to pass graphical elements and movement info without tying to implementation.
+
+    Composition: Classes like Map and GameRunner own instances of others—strong ownership relationship.
+
+
+Abstract Classes
+
+    We made Sprite abstract because it defines what all game objects must have (position, size, drawing, movement), but doesn't implement specific behaviour — that depends on whether it's a player, enemy, or static object.
+
+    This proves you understand inheritance and code reuse.
+
+Encapsulation
+
+    Each class hides its internal data (like health, position, stamina) and only exposes it through methods like jump(), takeDamage() or update(). That way, data can’t be changed directly from outside the object.
+
+    This proves you understand security and modularity in OOP.
+
+Composition & Aggregation
+
+    GameRunner owns the game objects like Player, Map, Timer, and Controller. This means:
+
+    These objects are essential parts of the game loop.
+
+    Each one handles its own responsibilities but works together.
+
+    This shows you can break down a big task into manageable, reusable parts — like building with LEGO blocks.
+
+Interface
+
+    We use the GameInterface so that the Map can interact with the display or movement system without knowing exactly how it's implemented. That means you could switch from a text-based game to a graphical one without changing your map logic.
+
+    This shows you understand abstraction and flexibility in design.
+
+
+
+🔸 Abstract Class: Sprite
+
+    Why abstract? All objects in the game (player, enemies, obstacles) share basic properties like x, y, width, height, and behaviors like drawSelf() and move().
+
+    By abstracting Sprite, you ensure common code reuse while allowing specific objects to override or add extra behavior (e.g., EnemySprite.animate() or Player.jump()).
+
+🔸 Inheritance
+
+    EnemySprite, NonMovingSprite, and Player inherit from Sprite, using polymorphism for rendering and movement.
+
+    This reduces duplicated logic and centralizes collision handling via the Sprite base class.
+
+🔸 Encapsulation
+
+    All key data (like health, money, speed, etc.) are private and accessed via methods.
+
+    Encapsulation allows your classes to be portable (you can reuse them in another project easily—just plug and play).
+
+🔸 Composition / Aggregation
+
+    The Map class uses a GameInterface to pass rendering/movement control to appropriate objects.
+
+    The Map loads from a text file, allowing level design to be external and modifiable.
+
+    PlayerController is composed into the Player class, handling user input and game logic.
+
+🔸 Interface: GameInterface
+
+    Acts as a way to decouple your drawing and movement logic from the actual game logic. This is useful for scalability and testing.
