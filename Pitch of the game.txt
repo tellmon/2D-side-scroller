@@ -1,9 +1,9 @@
 This game will be a 2D scroller going right to left. You will be playing as a horse trying to jump over obstacles like exploding barrels
 and horse jumps of 3 diffrent types that are selcected randomly for each jump when the map is drawn. You will finish the game when you reach 
-the flag at teh far left and the timer at the bottom will stop and have your end time displated for that level for a but then you will be 
+the flag at the far left and the timer at the bottom will stop and have your end time displated for that level for a but then you will be 
 send to the next level by loading a new map from another text file and the timer will be reset. I based the movment and the jumping off the
 dino game from google and the map loading and flag from mario bros. If you hit an obstacle your healf will go down depending on what obstacle
-it is and i fit is falls below zero a death screen will show.There is also a stamina setting that is not shown on the display that will go down
+if it health falls below zero a death screen will show.There is also a stamina setting that is not shown on the display that will go down
 on by a bit on every jump the player did. This prevents the player from jumping forever and make the game require some skill to beat as you need
 to perfictly time your jumps else you will run out of stamina and die. This stamina can only be regenerated at the end of a level when you get
 a flag and any left over stamina is not tranferd over. 
